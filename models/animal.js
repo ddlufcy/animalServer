@@ -1,5 +1,5 @@
-module.exports = function(sequelize, DataTypes){
-  return sequelize.define('animal', {
+module.exports = (sequelize, DataTypes) =>{
+  const Animal = sequelize.define('animal', {
     name: {
       type: DataTypes.STRING,
       allowNull: false
@@ -13,4 +13,5 @@ module.exports = function(sequelize, DataTypes){
       allowNull: false
     }
   })
+  return Animal;
 }
